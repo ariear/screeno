@@ -4,7 +4,7 @@
 <Hero />
 </div>
 <Feature />
-<div class="bg-[#141516]">
+<div class="bg-[#141516] overflow-hidden">
 <Help />
 </div>
 <Famous />
