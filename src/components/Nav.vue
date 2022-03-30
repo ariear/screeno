@@ -12,11 +12,28 @@
           <button class="font-normal py-3 mr-14">Login</button>
           <button class="font-normal bg-[#006AFF] rounded-full py-3 px-7">Start Free Trail</button>
       </div>
+      <div class="block md:hidden">
+          <img src="/img/white-menu.png" class="w-[35px]" @click="menu = !menu" alt="">
+      </div>
   </nav>
+  <div class="list-none absolute bg-white w-full left-0 font-monstand font-medium pl-5 block md:hidden overflow-hidden transition-all" :class="menu ? 'h-[200px] py-4 ' : 'h-0' ">
+      <li>Exemplet</li>
+      <li class="my-3">Pricing</li>
+      <li>About</li>
+      <li class="mt-4">
+        <button class="font-normal py-3 border px-5 rounded-full mr-4">Login</button>
+        <button class="font-normal bg-[#006AFF] rounded-full py-3 px-7 text-white">Start Free Trail</button>
+      </li>
+  </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 export default {
+    setup() {
+        const menu = ref(false)
 
+        return { menu }
+    }
 }
 </script>
